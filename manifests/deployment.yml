@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: poultonderazurevotingappredis 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: poultonderazurevotingappredis 
+    spec:
+      containers:
+        - name: poultonderazurevotingappredis 
+          image: mycontainerregistrypot.azurecr.io/poultonderazurevotingappredis
+          ports:
+          - containerPort: 80
